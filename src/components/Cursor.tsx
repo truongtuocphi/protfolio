@@ -1,7 +1,44 @@
 "use client";
 
-import React from "react";
+import { useEffect } from "react";
 
 export default function Cursor() {
-  return <div>Cursor</div>;
+  useEffect(() => {
+    const circle = document.getElementById("circle");
+
+    const updateCursorPosition = (e: MouseEvent) => {
+      const height = circle?.offsetHeight || 0;
+      const width = circle?.offsetWidth || 0;
+
+      setTimeout(() => {
+        if (circle) {
+          circle.style.left = `${e.pageX - width / 2}px`;
+          circle.style.top = `${e.pageY - height / 2}px`;
+        }
+      }, 20);
+    };
+
+    window.addEventListener("mousemove", updateCursorPosition);
+
+    return () => {
+      window.removeEventListener("mousemove", updateCursorPosition);
+    };
+  }, []);
+
+  return (
+    <div
+      id="circle"
+      style={{
+        position: "fixed",
+        border: "2px solid white",
+        borderRadius: "50%",
+        width: "2rem",
+        height: "2rem",
+        top: "-10rem",
+        left: "-10rem",
+        boxShadow: "0 0 10px white",
+        transition: "transform 0.4s, background 0.4s",
+      }}
+    />
+  );
 }
