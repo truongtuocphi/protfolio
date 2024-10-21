@@ -10,6 +10,14 @@ export default function Cursor() {
       const height = circle?.offsetHeight || 0;
       const width = circle?.offsetWidth || 0;
 
+      const target = e.target as HTMLElement;
+
+      if (circle && target.tagName === "A") {
+        circle.classList.add("big");
+      } else {
+        circle?.classList.remove("big");
+      }
+
       setTimeout(() => {
         if (circle) {
           circle.style.left = `${e.pageX - width / 2}px`;
@@ -37,7 +45,7 @@ export default function Cursor() {
         top: "-10rem",
         left: "-10rem",
         boxShadow: "0 0 10px white",
-        transition: "transform 0.4s, background 0.4s",
+        transition: "transform 1s, background 0.4s",
         zIndex: "-10",
       }}
     />

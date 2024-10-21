@@ -81,3 +81,8 @@ body {
   background-color: #0e090d;
   color: white;
 }
+
+.circle.big {
+  background: white;
+  transform: scale(2);
+}
