@@ -82,7 +82,8 @@ body {
   color: white;
 }
 
-.circle.big {
+.big {
   background: white;
   transform: scale(2);
+  z-index: -20;
 }

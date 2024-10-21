@@ -7,23 +7,23 @@ export default function Cursor() {
     const circle = document.getElementById("circle");
 
     const updateCursorPosition = (e: MouseEvent) => {
-      const height = circle?.offsetHeight || 0;
-      const width = circle?.offsetWidth || 0;
+      if (circle) {
+        const height = circle.offsetHeight || 0;
+        const width = circle.offsetWidth || 0;
 
-      const target = e.target as HTMLElement;
+        const target = e.target as HTMLElement;
 
-      if (circle && target.tagName === "A") {
-        circle.classList.add("big");
-      } else {
-        circle?.classList.remove("big");
-      }
+        if (target.tagName === "A") {
+          circle.classList.add("big");
+        } else {
+          circle?.classList.remove("big");
+        }
 
-      setTimeout(() => {
-        if (circle) {
+        setTimeout(() => {
           circle.style.left = `${e.pageX - width / 2}px`;
           circle.style.top = `${e.pageY - height / 2}px`;
-        }
-      }, 20);
+        }, 20);
+      }
     };
 
     window.addEventListener("mousemove", updateCursorPosition);
@@ -45,7 +45,7 @@ export default function Cursor() {
         top: "-10rem",
         left: "-10rem",
         boxShadow: "0 0 10px white",
-        transition: "transform 1s, background 0.4s",
+        transition: "transform 0.4s, background 0.4s",
         zIndex: "-10",
       }}
     />
