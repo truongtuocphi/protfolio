@@ -84,6 +84,6 @@ body {
 
 .big {
   background: white;
-  transform: scale(2);
+  transform: scale(1.5);
   z-index: -20;
 }
