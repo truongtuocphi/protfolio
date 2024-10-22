@@ -22,7 +22,7 @@ export default function Cursor() {
         setTimeout(() => {
           circle.style.left = `${e.pageX - width / 2}px`;
           circle.style.top = `${e.pageY - height / 2}px`;
-        }, 50);
+        }, 60);
       }
     };
 
