@@ -12,7 +12,6 @@ export default function Navbar() {
   return (
     <nav className="h-28 flex justify-between items-center py-5">
       <Logo />
-
       <ul className="flex items-center gap-6 text-2xl">
         {menuItems.map((menu, index) => (
           <li key={index}>
