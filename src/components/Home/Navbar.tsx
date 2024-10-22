@@ -3,9 +3,9 @@ import React from "react";
 import Logo from "@/components/Logo";
 
 const menuItems = [
-  { title: "HOME", link: "/" },
-  { title: "ABOUT", link: "/about" },
-  { title: "WORK", link: "/work" },
+  { title: "Home", link: "/" },
+  { title: "Work", link: "/work" },
+  { title: "About", link: "/about" },
 ];
 
 export default function Navbar() {
