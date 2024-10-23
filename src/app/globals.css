@@ -80,6 +80,7 @@ body {
 @layer utilities {
   .responsive-font {
     font-size: min(7.6vw, 11rem);
+    line-height: normal;
   }
 }
 
