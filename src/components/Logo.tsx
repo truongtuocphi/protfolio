@@ -21,9 +21,9 @@ const Logo: React.FC = () => {
 
       const moveOut = () => {
         gsap.to(box, {
-          y: -70,
+          y: -80,
           duration: 0.2,
-          ease: "power1.out",
+          ease: "power1.in",
           onComplete: () => {
             gsap.set(box, {
               y: 0,
