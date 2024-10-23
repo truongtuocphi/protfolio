@@ -78,7 +78,7 @@ body {
 }
 
 @layer utilities {
-  .responsive-font {
+  .responsive-font-xl {
     font-size: min(7.6vw, 11rem);
     line-height: normal;
   }

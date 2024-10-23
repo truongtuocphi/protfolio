@@ -2,7 +2,7 @@ export default function Home() {
   return (
     <div className="w-full h-[calc(100vh-112px)] grid grid-cols-1 md:grid-cols-8 items-center text-center ">
       <div className="flex flex-col justify-center md:justify-end col-span-2">
-        <p className="responsive-font text-end">Phi Truong</p>
+        <p className="responsive-font-xl text-end">Phi Truong</p>
         <div className="flex flex-col items-end text-2xl">
           <p>Live and work in Ho Chi Minh City</p>
           <p>Available for a full-time position</p>
@@ -16,7 +16,7 @@ export default function Home() {
       </div>
 
       <div className="flex flex-col justify-center md:justify-end col-span-2">
-        <p className="responsive-font text-left">Front End Developer</p>
+        <p className="responsive-font-xl text-left">Front End Developer</p>
       </div>
     </div>
   );
