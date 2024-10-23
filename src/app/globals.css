@@ -82,6 +82,10 @@ body {
     font-size: min(7.6vw, 11rem);
     line-height: normal;
   }
+  .responsive-font-base {
+    font-size: min(4.4vw, 8rem);
+    line-height: normal;
+  }
 }
 
 body {

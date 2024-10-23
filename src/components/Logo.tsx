@@ -2,39 +2,42 @@
 
 import gsap from "gsap";
 import Link from "next/link";
-import { useEffect, useRef } from "react";
+import { useLayoutEffect, useRef } from "react";
 
 const Logo: React.FC = () => {
   const boxRef = useRef<HTMLDivElement | null>(null);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const box = boxRef.current;
 
     if (box) {
-      const moveRight = () => {
+      const moveIn = () => {
         gsap.to(box, {
           y: -30,
-          opacity: 1,
           duration: 0.2,
           ease: "power1.out",
         });
       };
 
-      const moveLeft = () => {
+      const moveOut = () => {
         gsap.to(box, {
-          y: 0,
-          opacity: 1,
+          y: -70,
           duration: 0.2,
           ease: "power1.out",
+          onComplete: () => {
+            gsap.set(box, {
+              y: 0,
+            });
+          },
         });
       };
 
-      box.addEventListener("mouseover", moveRight);
-      box.addEventListener("mouseout", moveLeft);
+      box.addEventListener("mouseover", moveIn);
+      box.addEventListener("mouseout", moveOut);
 
       return () => {
-        box.removeEventListener("mouseover", moveRight);
-        box.removeEventListener("mouseout", moveLeft);
+        box.removeEventListener("mouseover", moveIn);
+        box.removeEventListener("mouseout", moveOut);
       };
     }
   }, []);
@@ -46,6 +49,9 @@ const Logo: React.FC = () => {
           PHI TRUONG.
         </Link>
         <Link href={"/"} className="font-medium text-blue-500 text-3xl">
+          PHI TRUONG.
+        </Link>
+        <Link href={"/"} className="font-medium text-3xl">
           PHI TRUONG.
         </Link>
       </div>
