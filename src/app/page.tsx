@@ -10,7 +10,9 @@ export default function Home() {
       </div>
 
       <div className="col-span-4 flex items-center justify-center">
-        <div className="w-[550px] h-[550px] bg-blue-500 rounded-full aspect-ratio"></div>
+        <div className="w-[550px] h-[550px] p-2 border-[2px] border-blue-500 rounded-full">
+          <div className="w-full h-full bg-blue-500 rounded-full aspect-ratio"></div>
+        </div>
       </div>
 
       <div className="flex flex-col justify-center md:justify-end col-span-2">
