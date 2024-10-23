@@ -22,7 +22,7 @@ export default function Cursor() {
         setTimeout(() => {
           circle.style.left = `${e.pageX - width / 2}px`;
           circle.style.top = `${e.pageY - height / 2}px`;
-        }, 70);
+        }, 100);
       }
     };
 
@@ -46,6 +46,7 @@ export default function Cursor() {
         left: "-10rem",
         boxShadow: "0 0 10px white",
         transition: "transform 0.4s, background 0.4s",
+        zIndex: "-10",
       }}
     />
   );
