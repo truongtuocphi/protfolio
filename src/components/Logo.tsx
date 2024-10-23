@@ -1,6 +1,7 @@
 "use client";
 
 import gsap from "gsap";
+import Image from "next/image";
 import Link from "next/link";
 import { useLayoutEffect, useRef } from "react";
 
@@ -13,7 +14,7 @@ const Logo: React.FC = () => {
     if (box) {
       const moveIn = () => {
         gsap.to(box, {
-          y: -30,
+          y: -50,
           duration: 0.2,
           ease: "power1.out",
         });
@@ -21,7 +22,7 @@ const Logo: React.FC = () => {
 
       const moveOut = () => {
         gsap.to(box, {
-          y: -80,
+          y: -90,
           duration: 0.2,
           ease: "power1.in",
           onComplete: () => {
@@ -43,16 +44,34 @@ const Logo: React.FC = () => {
   }, []);
 
   return (
-    <div className="w-fit h-10 overflow-hidden">
-      <div ref={boxRef} className="flex flex-col">
+    <div className="w-34 h-14 overflow-hidden">
+      <div ref={boxRef} className="flex flex-col gap-3">
         <Link href={"/"} className="font-medium text-3xl">
-          PHI TRUONG.
+          <Image
+            alt="logo"
+            src="/images/signature_default.png"
+            className="h-auto w-auto"
+            width={100}
+            height={100}
+          />
         </Link>
         <Link href={"/"} className="font-medium text-blue-500 text-3xl">
-          PHI TRUONG.
+          <Image
+            alt="logo"
+            src="/images/signature_blue.png"
+            className="h-auto w-auto"
+            width={100}
+            height={100}
+          />
         </Link>
         <Link href={"/"} className="font-medium text-3xl">
-          PHI TRUONG.
+          <Image
+            alt="logo"
+            src="/images/signature_default.png"
+            className="h-auto w-auto"
+            width={100}
+            height={100}
+          />
         </Link>
       </div>
     </div>

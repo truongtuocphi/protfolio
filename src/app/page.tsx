@@ -20,7 +20,7 @@ export default function Home() {
 
       <div className="flex flex-col justify-center md:justify-end col-span-2">
         <p className="responsive-font-base text-left">
-          Fresher Frontend Web Developer
+          Fresher Front-end Web Developer
         </p>
       </div>
     </div>
