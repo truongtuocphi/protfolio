@@ -77,6 +77,12 @@ body {
   }
 }
 
+@layer utilities {
+  .responsive-font {
+    font-size: min(7.6vw, 11rem);
+  }
+}
+
 body {
   background-color: #0e090d;
   color: white;

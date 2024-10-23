@@ -46,7 +46,6 @@ export default function Cursor() {
         left: "-10rem",
         boxShadow: "0 0 10px white",
         transition: "transform 0.4s, background 0.4s",
-        zIndex: "-10",
       }}
     />
   );
