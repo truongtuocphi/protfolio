@@ -7,6 +7,33 @@ import { useLayoutEffect, useRef } from "react";
 
 const Logo: React.FC = () => {
   const boxRef = useRef<HTMLDivElement | null>(null);
+  const logoElements: JSX.Element[] = [];
+
+  for (let i = 1; i <= 3; i++) {
+    logoElements.push(
+      i % 2 != 0 ? (
+        <Link key={i} href="/">
+          <Image
+            alt="logo"
+            src="/images/signature_default.png"
+            className="h-auto w-auto"
+            width={100}
+            height={100}
+          />
+        </Link>
+      ) : (
+        <Link key={i} href="/">
+          <Image
+            alt="logo"
+            src="/images/signature_blue.png"
+            className="h-auto w-auto"
+            width={100}
+            height={100}
+          />
+        </Link>
+      )
+    );
+  }
 
   useLayoutEffect(() => {
     const box = boxRef.current;
@@ -46,33 +73,7 @@ const Logo: React.FC = () => {
   return (
     <div className="w-34 h-14 overflow-hidden">
       <div ref={boxRef} className="flex flex-col gap-3">
-        <Link href={"/"} className="font-medium text-3xl">
-          <Image
-            alt="logo"
-            src="/images/signature_default.png"
-            className="h-auto w-auto"
-            width={100}
-            height={100}
-          />
-        </Link>
-        <Link href={"/"} className="font-medium text-blue-500 text-3xl">
-          <Image
-            alt="logo"
-            src="/images/signature_blue.png"
-            className="h-auto w-auto"
-            width={100}
-            height={100}
-          />
-        </Link>
-        <Link href={"/"} className="font-medium text-3xl">
-          <Image
-            alt="logo"
-            src="/images/signature_default.png"
-            className="h-auto w-auto"
-            width={100}
-            height={100}
-          />
-        </Link>
+        {logoElements}
       </div>
     </div>
   );
