@@ -94,7 +94,7 @@ body {
 }
 
 .big {
-  background: white;
-  transform: scale(1.5);
+  /* background: white; */
+  transform: scale(2);
   z-index: -20;
 }

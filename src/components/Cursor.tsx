@@ -13,8 +13,11 @@ export default function Cursor() {
 
         const target = e.target as HTMLElement;
 
+        console.log(target.tagName);
+
         if (target.tagName === "A") {
           circle.classList.add("big");
+          circle.style.pointerEvents = "none";
         } else {
           circle?.classList.remove("big");
         }
@@ -46,7 +49,7 @@ export default function Cursor() {
         left: "-10rem",
         boxShadow: "0 0 10px white",
         transition: "transform 0.4s, background 0.4s",
-        zIndex: "-10",
+        // zIndex: "-10",
       }}
     />
   );
