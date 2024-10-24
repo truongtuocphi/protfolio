@@ -33,7 +33,7 @@ const Logo: React.FC = () => {
     if (box) {
       const moveIn = () => {
         gsap.to(box, {
-          y: -70,
+          y: -69,
           duration: 0.2,
           ease: "power1.out",
         });
