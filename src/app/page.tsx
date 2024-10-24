@@ -22,6 +22,7 @@ export default function Home() {
               className="absolute left-0 top-0 transform w-auto h-auto"
               fill
               alt={"Logo"}
+              sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           </div>
         </div>
