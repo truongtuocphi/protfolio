@@ -13,8 +13,6 @@ const Cursor: React.FC = () => {
 
         const target = e.target as HTMLElement;
 
-        console.log(target.tagName);
-
         if (target.tagName === "A") {
           circle.classList.add("big");
           circle.style.pointerEvents = "none";

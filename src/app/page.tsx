@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Home() {
   return (
     <div className="w-full h-[calc(100vh-112px)] grid grid-cols-1 md:grid-cols-8 items-center text-center ">
@@ -14,7 +16,14 @@ export default function Home() {
 
       <div className="col-span-4 flex items-center justify-center">
         <div className="w-[550px] h-[550px] p-2 border-[2px] border-blue-500 rounded-full">
-          <div className="w-full h-full bg-blue-500 rounded-full aspect-ratio"></div>
+          <div className="relative w-full h-full bg-blue-500 rounded-full aspect-ratio">
+            <Image
+              src={"/images/user.png"}
+              className="absolute left-0 top-0 transform w-auto h-auto"
+              fill
+              alt={"Logo"}
+            />
+          </div>
         </div>
       </div>
 
