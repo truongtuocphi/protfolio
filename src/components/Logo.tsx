@@ -19,7 +19,7 @@ const Logo: React.FC = () => {
               ? "/images/signature_blue.png"
               : "/images/signature_default.png"
           }`}
-          className="h-auto w-auto"
+          className="h-auto w-auto cursor-pointer"
           width={100}
           height={100}
         />

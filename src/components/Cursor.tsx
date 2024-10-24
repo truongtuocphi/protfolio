@@ -2,9 +2,9 @@
 
 import { useEffect } from "react";
 
-export default function Cursor() {
+const Cursor: React.FC = () => {
   useEffect(() => {
-    const circle = document.getElementById("circle");
+    const circle = document.getElementById("circle") as HTMLElement;
 
     const updateCursorPosition = (e: MouseEvent) => {
       if (circle) {
@@ -49,8 +49,9 @@ export default function Cursor() {
         left: "-10rem",
         boxShadow: "0 0 10px white",
         transition: "transform 0.4s, background 0.4s",
-        // zIndex: "-10",
       }}
     />
   );
-}
+};
+
+export default Cursor;

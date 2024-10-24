@@ -6,13 +6,13 @@ import Logo from "@/components/Logo";
 import { usePathname } from "next/navigation";
 import gsap from "gsap";
 
-const menuItems = [
+const menuItems: { title: string; link: string }[] = [
   { title: "Home", link: "/" },
   { title: "Work", link: "/work" },
   { title: "About", link: "/about" },
 ];
 
-export default function Navbar() {
+const Navbar: React.FC = () => {
   const pathName = usePathname();
   const dotRef = useRef<HTMLDivElement | null>(null);
 
@@ -27,7 +27,7 @@ export default function Navbar() {
   useEffect(() => {
     const activeItemMenu = document.querySelector(
       `#menu-${getMenuId(pathName)}`
-    );
+    ) as HTMLElement;
     const dot = dotRef.current;
 
     if (activeItemMenu instanceof HTMLElement && dot) {
@@ -61,4 +61,6 @@ export default function Navbar() {
       </nav>
     </div>
   );
-}
+};
+
+export default Navbar;
