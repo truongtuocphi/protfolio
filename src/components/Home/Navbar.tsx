@@ -1,6 +1,10 @@
+"use client";
+
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Logo from "@/components/Logo";
+import { usePathname } from "next/navigation";
+import gsap from "gsap";
 
 const menuItems = [
   { title: "Home", link: "/" },
@@ -9,16 +13,52 @@ const menuItems = [
 ];
 
 export default function Navbar() {
+  const pathName = usePathname();
+  const dotRef = useRef<HTMLDivElement | null>(null);
+
+  const getMenuId = (path: string) => {
+    if (path === "/") {
+      return "menu-home";
+    }
+
+    return `menu-${path.replace("/", "")}`;
+  };
+
+  useEffect(() => {
+    const activeItemMenu = document.querySelector(
+      `#menu-${getMenuId(pathName)}`
+    );
+    const dot = dotRef.current;
+
+    if (activeItemMenu instanceof HTMLElement && dot) {
+      const { offsetLeft, offsetWidth } = activeItemMenu;
+
+      gsap.to(dot, {
+        x: offsetLeft + offsetWidth / 2 - dot.offsetWidth / 2,
+        duration: 0.5,
+        ease: "power2.out",
+      });
+    }
+  }, [pathName]);
+
   return (
-    <nav className="h-28 flex justify-between items-center py-5">
+    <div className="h-28 flex justify-between items-center py-5">
       <Logo />
-      <ul className="flex items-center gap-6 text-2xl">
-        {menuItems.map((menu, index) => (
-          <li key={index}>
-            <Link href={menu.link}>{menu.title}</Link>
-          </li>
-        ))}
-      </ul>
-    </nav>
+      <nav className="relative">
+        <ul className="flex items-center gap-6 text-2xl">
+          {menuItems.map((menu, index) => (
+            <li key={index} id={`menu-${getMenuId(menu.link)}`}>
+              <Link className="relative" href={menu.link}>
+                {menu.title}
+              </Link>
+            </li>
+          ))}
+        </ul>
+        <span
+          ref={dotRef}
+          className="absolute size-2 rounded-full bg-blue-500"
+        ></span>
+      </nav>
+    </div>
   );
 }
