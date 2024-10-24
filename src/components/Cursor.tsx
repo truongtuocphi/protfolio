@@ -19,7 +19,7 @@ const Cursor: React.FC = () => {
           circle.classList.add("big");
           circle.style.pointerEvents = "none";
         } else {
-          circle?.classList.remove("big");
+          circle.classList.remove("big");
         }
 
         setTimeout(() => {

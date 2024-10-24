@@ -3,7 +3,7 @@
 import gsap from "gsap";
 import Image from "next/image";
 import Link from "next/link";
-import { useLayoutEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 
 const Logo: React.FC = () => {
   const boxRef = useRef<HTMLDivElement | null>(null);
@@ -27,7 +27,7 @@ const Logo: React.FC = () => {
     );
   }
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const box = boxRef.current;
 
     if (box) {
@@ -41,7 +41,7 @@ const Logo: React.FC = () => {
 
       const moveOut = () => {
         gsap.to(box, {
-          y: -100,
+          y: -120,
           duration: 0.2,
           ease: "power1.in",
           onComplete: () => {

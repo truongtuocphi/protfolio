@@ -19,9 +19,9 @@ export default function RootLayout({
       <body
         className={`${myFont.className} antialiased px-28 max-w-[1920px] mx-auto`}
       >
+        <Cursor />
         <Navbar />
         {children}
-        <Cursor />
       </body>
     </html>
   );
