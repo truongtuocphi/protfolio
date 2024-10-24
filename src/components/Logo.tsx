@@ -33,7 +33,7 @@ const Logo: React.FC = () => {
     if (box) {
       const moveIn = () => {
         gsap.to(box, {
-          y: -50,
+          y: -70,
           duration: 0.2,
           ease: "power1.out",
         });
@@ -41,7 +41,7 @@ const Logo: React.FC = () => {
 
       const moveOut = () => {
         gsap.to(box, {
-          y: -90,
+          y: -100,
           duration: 0.2,
           ease: "power1.in",
           onComplete: () => {
@@ -63,7 +63,7 @@ const Logo: React.FC = () => {
   }, []);
 
   return (
-    <div className="w-34 h-14 overflow-hidden">
+    <div className="w-34 h-16 overflow-hidden">
       <div ref={boxRef} className="flex flex-col gap-3">
         {logoElements}
       </div>
