@@ -11,27 +11,19 @@ const Logo: React.FC = () => {
 
   for (let i = 1; i <= 3; i++) {
     logoElements.push(
-      i % 2 != 0 ? (
-        <Link key={i} href="/">
-          <Image
-            alt="logo"
-            src="/images/signature_default.png"
-            className="h-auto w-auto"
-            width={100}
-            height={100}
-          />
-        </Link>
-      ) : (
-        <Link key={i} href="/">
-          <Image
-            alt="logo"
-            src="/images/signature_blue.png"
-            className="h-auto w-auto"
-            width={100}
-            height={100}
-          />
-        </Link>
-      )
+      <Link key={i} href="/">
+        <Image
+          alt="logo"
+          src={`${
+            i === 2
+              ? "/images/signature_blue.png"
+              : "/images/signature_default.png"
+          }`}
+          className="h-auto w-auto"
+          width={100}
+          height={100}
+        />
+      </Link>
     );
   }
 
