@@ -1,9 +1,9 @@
 "use client";
 
+import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useRef } from "react";
 
 const Logo: React.FC = () => {
   const boxRef = useRef<HTMLDivElement | null>(null);

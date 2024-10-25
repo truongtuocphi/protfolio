@@ -1,4 +1,4 @@
-// import Image from "next/image";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -15,15 +15,15 @@ export default function Home() {
       </div>
 
       <div className="col-span-4 flex items-center justify-center">
-        <div className="w-[550px] h-[550px] p-2 border-[3px] border-blue-500 rounded-full">
-          <div className="w-full h-full bg-blue-500 rounded-full ">
-            {/* <Image
+        <div className="w-[550px] h-[550px] p-2 border-[3px] border-blue-500 rounded-full -z-20">
+          <div className="relative w-full h-full bg-blue-500 rounded-full ">
+            <Image
               src={"/images/user.png"}
-              className="absolute left-0 top-0 transform w-auto h-auto"
+              className="absolute w-auto h-auto"
               fill
               alt={"Logo"}
-              sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            /> */}
+              sizes="(max-width: 700px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
           </div>
         </div>
       </div>

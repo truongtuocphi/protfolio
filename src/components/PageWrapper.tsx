@@ -1,6 +1,6 @@
 "use client";
 
-import { useLayoutEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import Loading from "@/components/Loading";
 
@@ -8,7 +8,7 @@ const PageWrapper = ({ children }: { children: React.ReactNode }) => {
   const [loading, setLoading] = useState(true);
   const pathname = usePathname();
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const handleStart = () => {
       setLoading(true);
     };
