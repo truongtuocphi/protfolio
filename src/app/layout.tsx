@@ -3,6 +3,7 @@ import { myFont } from "@/components/font/fonts";
 import Cursor from "@/components/Cursor";
 import "./globals.css";
 import Navbar from "@/components/Home/Navbar";
+import PageWrapper from "@/components/PageWrapper";
 
 export const metadata: Metadata = {
   title: "Truong Tuoc Phi",
@@ -21,7 +22,7 @@ export default function RootLayout({
       >
         <Cursor />
         <Navbar />
-        {children}
+        <PageWrapper>{children}</PageWrapper>
       </body>
     </html>
   );
