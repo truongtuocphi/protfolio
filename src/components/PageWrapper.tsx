@@ -1,14 +1,14 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useLayoutEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import Loading from "@/components/Loading";
 
 const PageWrapper = ({ children }: { children: React.ReactNode }) => {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const pathname = usePathname();
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const handleStart = () => {
       setLoading(true);
     };
@@ -21,7 +21,7 @@ const PageWrapper = ({ children }: { children: React.ReactNode }) => {
 
     const timer = setTimeout(() => {
       handleComplete();
-    }, 800);
+    }, 1000);
 
     return () => {
       clearTimeout(timer);
