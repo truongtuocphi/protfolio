@@ -21,7 +21,7 @@ const PageWrapper = ({ children }: { children: React.ReactNode }) => {
 
     const timer = setTimeout(() => {
       handleComplete();
-    }, 500);
+    }, 800);
 
     return () => {
       clearTimeout(timer);

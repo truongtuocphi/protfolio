@@ -17,12 +17,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${myFont.className} antialiased px-28 max-w-[1920px] mx-auto`}
-      >
-        <Cursor />
-        <Navbar />
-        <PageWrapper>{children}</PageWrapper>
+      <body className={`${myFont.className} px-28 max-w-[1920px] mx-auto`}>
+        <PageWrapper>
+          <Cursor />
+          <Navbar />
+          {children}
+        </PageWrapper>
       </body>
     </html>
   );

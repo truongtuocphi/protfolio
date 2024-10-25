@@ -96,5 +96,5 @@ body {
 .big {
   /* background: white; */
   transform: scale(2);
-  z-index: -20;
+  z-index: -10;
 }
