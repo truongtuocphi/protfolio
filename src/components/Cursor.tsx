@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 
-const Cursor: React.FC = () => {
+const Cursor = () => {
   useEffect(() => {
     const circle = document.getElementById("circle") as HTMLElement;
 

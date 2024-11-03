@@ -5,7 +5,7 @@ import gsap from "gsap";
 import Image from "next/image";
 import Link from "next/link";
 
-const Logo: React.FC = () => {
+const Logo = () => {
   const boxRef = useRef<HTMLDivElement | null>(null);
   const logoElements: JSX.Element[] = [];
 
