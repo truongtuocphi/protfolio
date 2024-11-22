@@ -6,13 +6,12 @@ const Loading = ({ onComplete }: { onComplete?: () => void }) => {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Animation: Slide up the loading screen
       gsap.to(loadingRef.current, {
         y: "-100%",
         duration: 1.5,
         ease: "power4.inOut",
-        delay: 1, // Wait for 2 seconds before animating
-        onComplete: onComplete, // Trigger the callback when animation ends
+        delay: 1,
+        onComplete: onComplete,
       });
     });
 
