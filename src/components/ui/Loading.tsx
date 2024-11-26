@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import { useLottie } from "lottie-react";
-import LoadingAnimation from "/animations/loading.json";
+import LoadingAnimation from "../../../public/animations/loading.json";
 import gsap from "gsap";
 
 const options = {
