@@ -4,6 +4,7 @@ import Cursor from "@/components/ui/Cursor";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import PageWrapper from "@/components/layout/PageWrapper";
+import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Truong Tuoc Phi",
@@ -17,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${myFont.className} px-28 max-w-[1920px] mx-auto`}>
+      <body className={cn(myFont.className, "px-28 max-w-[1920px] mx-auto")}>
         <PageWrapper>
           <Cursor />
           <Navbar />
