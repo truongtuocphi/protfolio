@@ -56,7 +56,7 @@ const Navbar = () => {
         </ul>
         <span
           ref={dotRef}
-          className="absolute size-2 rounded-full bg-blue-500"
+          className="absolute size-2 rounded-full bg-blue-700"
         ></span>
       </nav>
     </div>

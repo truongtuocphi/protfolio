@@ -15,8 +15,8 @@ const ProfileHero = () => {
       </div>
 
       <div className="col-span-4 flex items-center justify-center">
-        <div className="w-[550px] h-[550px] p-2 border-[3px] border-blue-500 rounded-full -z-20">
-          <div className="relative w-full h-full bg-blue-500 rounded-full ">
+        <div className="w-[550px] h-[550px] p-2 border-[3px] border-blue-700 rounded-full -z-20">
+          <div className="relative w-full h-full bg-blue-700 rounded-full ">
             <Image
               src={"/images/user.png"}
               className="absolute w-auto h-auto"
