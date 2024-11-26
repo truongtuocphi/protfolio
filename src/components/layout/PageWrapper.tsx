@@ -29,10 +29,10 @@ const PageWrapper = ({ children }: { children: React.ReactNode }) => {
   }, [pathname]);
 
   return (
-    <>
+    <div className="max-w-[2176px] px-4 md:px-12 lg:px-[128px] xl:px-[128px] mx-auto">
       {loading && <Loading />}
       {children}
-    </>
+    </div>
   );
 };
 

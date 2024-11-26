@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn(myFont.className, "px-28 max-w-[1920px] mx-auto")}>
+      <body className={cn(myFont.className)}>
         <PageWrapper>
           <Cursor />
           <Navbar />
