@@ -4,7 +4,7 @@ const ProfileHero = () => {
   return (
     <div className="w-full h-[calc(100vh-112px)] grid grid-cols-1 md:grid-cols-8 items-center text-center ">
       <div className="flex flex-col justify-center md:justify-end col-span-2">
-        <p className="responsive-font-xl text-end">Phi Truong</p>
+        <span className="responsive-font-xl text-end">Phi Truong</span>
         <div
           className="flex flex-col items-end text-base"
           style={{ fontFamily: '"PP Neue Montreal", sans-serif' }}
