@@ -9,8 +9,8 @@ export default function Home() {
           className="flex flex-col items-end text-base"
           style={{ fontFamily: '"PP Neue Montreal", sans-serif' }}
         >
-          <p>Live and work in Ho Chi Minh City</p>
-          <p>Available for a full-time position</p>
+          <span>Live and work in Ho Chi Minh City</span>
+          <span>Available for a full-time position</span>
         </div>
       </div>
 
@@ -29,9 +29,9 @@ export default function Home() {
       </div>
 
       <div className="flex flex-col justify-center md:justify-end col-span-2">
-        <p className="responsive-font-base text-left">
+        <span className="responsive-font-base text-left">
           Fresher Front-end Web Developer
-        </p>
+        </span>
       </div>
     </div>
   );
