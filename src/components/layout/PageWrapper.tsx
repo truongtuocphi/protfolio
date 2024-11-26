@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
-import Loading from "@/components/Loading";
+import Loading from "@/components/ui/Loading";
 
 const PageWrapper = ({ children }: { children: React.ReactNode }) => {
   const [loading, setLoading] = useState(true);

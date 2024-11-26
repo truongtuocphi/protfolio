@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { myFont } from "@/components/font/fonts";
-import Cursor from "@/components/Cursor";
+import { myFont } from "@/app/font";
+import Cursor from "@/components/ui/Cursor";
 import "./globals.css";
-import Navbar from "@/components/Home/Navbar";
-import PageWrapper from "@/components/PageWrapper";
+import Navbar from "@/components/layout/Navbar";
+import PageWrapper from "@/components/layout/PageWrapper";
 
 export const metadata: Metadata = {
   title: "Truong Tuoc Phi",

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import React, { useEffect, useRef } from "react";
-import Logo from "@/components/Logo";
+import Logo from "@/components/ui/Logo";
 import { usePathname } from "next/navigation";
 import gsap from "gsap";
 
