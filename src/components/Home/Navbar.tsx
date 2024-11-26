@@ -12,7 +12,7 @@ const menuItems: { title: string; link: string }[] = [
   { title: "About", link: "/about" },
 ];
 
-const Navbar: React.FC = () => {
+const Navbar = () => {
   const pathName = usePathname();
   const dotRef = useRef<HTMLDivElement | null>(null);
 
