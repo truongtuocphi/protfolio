@@ -8,7 +8,7 @@ const options = {
   loop: true,
 };
 
-const Loading = ({ onComplete }: { onComplete?: () => void }) => {
+const Loading = () => {
   const { View } = useLottie(options);
   const loadingRef = useRef<HTMLDivElement | null>(null);
 
@@ -19,12 +19,11 @@ const Loading = ({ onComplete }: { onComplete?: () => void }) => {
         duration: 1.5,
         ease: "power4.inOut",
         delay: 2,
-        onComplete: onComplete,
       });
     });
 
     return () => ctx.revert();
-  }, [onComplete]);
+  }, []);
 
   return (
     <div
