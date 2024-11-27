@@ -5,27 +5,14 @@ import gsap from "gsap";
 import Image from "next/image";
 import Link from "next/link";
 
+const logoSources = [
+  "/images/signature_default.png",
+  "/images/signature_blue.png",
+  "/images/signature_default.png",
+];
+
 const Logo = () => {
   const boxRef = useRef<HTMLDivElement | null>(null);
-  const logoElements: JSX.Element[] = [];
-
-  for (let i = 1; i <= 3; i++) {
-    logoElements.push(
-      <Link key={i} href="/">
-        <Image
-          alt="logo"
-          src={`${
-            i === 2
-              ? "/images/signature_blue.png"
-              : "/images/signature_default.png"
-          }`}
-          className="h-auto w-auto cursor-pointer"
-          width={100}
-          height={100}
-        />
-      </Link>
-    );
-  }
 
   useEffect(() => {
     const box = boxRef.current;
@@ -65,7 +52,17 @@ const Logo = () => {
   return (
     <div className="w-34 h-16 overflow-hidden">
       <div ref={boxRef} className="flex flex-col gap-3">
-        {logoElements}
+        {logoSources.map((src, index) => (
+          <Link key={index} href="/">
+            <Image
+              alt="logo"
+              src={src}
+              className="h-auto w-auto cursor-pointer"
+              width={100}
+              height={100}
+            />
+          </Link>
+        ))}
       </div>
     </div>
   );
