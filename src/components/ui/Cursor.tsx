@@ -29,6 +29,7 @@ const Cursor = () => {
 
     window.addEventListener("mousemove", updateCursorPosition);
 
+    //clear the event listener on unmount
     return () => {
       window.removeEventListener("mousemove", updateCursorPosition);
     };
