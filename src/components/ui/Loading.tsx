@@ -13,16 +13,23 @@ const Loading = () => {
   const loadingRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
+    document.body.style.overflow = "hidden";
     const ctx = gsap.context(() => {
       gsap.to(loadingRef.current, {
         y: "-100%",
         duration: 1.5,
         ease: "power4.inOut",
         delay: 2,
+        onComplete: () => {
+          document.body.style.overflow = "";
+        },
       });
     });
 
-    return () => ctx.revert();
+    return () => {
+      document.body.style.overflow = "";
+      ctx.revert();
+    };
   }, []);
 
   return (
