@@ -42,7 +42,7 @@ const Navbar = () => {
   }, [pathName]);
 
   return (
-    <div className="h-28 flex justify-between items-center py-5">
+    <div className="h-28 sticky top-0 flex justify-between items-center py-5">
       <Logo />
       <nav className="relative">
         <ul className="flex items-center gap-6 text-2xl">
