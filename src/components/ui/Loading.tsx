@@ -20,9 +20,6 @@ const Loading = () => {
         duration: 1.5,
         ease: "power4.inOut",
         delay: 2,
-        onComplete: () => {
-          document.body.style.overflow = "";
-        },
       });
     });
 
