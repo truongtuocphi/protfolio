@@ -20,16 +20,13 @@ const Cursor = () => {
           circle.classList.remove("big");
         }
 
-        // Cập nhật vị trí con trỏ
         circle.style.left = `${e.clientX - width / 2}px`;
         circle.style.top = `${e.clientY - height / 2}px`;
       }
     };
 
-    // Lắng nghe sự kiện mousemove
     window.addEventListener("mousemove", updateCursorPosition);
 
-    // Cleanup
     return () => {
       window.removeEventListener("mousemove", updateCursorPosition);
     };
