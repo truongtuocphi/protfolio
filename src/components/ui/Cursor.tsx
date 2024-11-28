@@ -20,15 +20,16 @@ const Cursor = () => {
           circle.classList.remove("big");
         }
 
-        setTimeout(() => {
-          circle.style.left = `${e.pageX - width / 2}px`;
-          circle.style.top = `${e.pageY - height / 2}px`;
-        }, 100);
+        // Cập nhật vị trí con trỏ
+        circle.style.left = `${e.clientX - width / 2}px`;
+        circle.style.top = `${e.clientY - height / 2}px`;
       }
     };
 
+    // Lắng nghe sự kiện mousemove
     window.addEventListener("mousemove", updateCursorPosition);
 
+    // Cleanup
     return () => {
       window.removeEventListener("mousemove", updateCursorPosition);
     };
@@ -46,7 +47,9 @@ const Cursor = () => {
         top: "-10rem",
         left: "-10rem",
         boxShadow: "0 0 10px white",
-        transition: "transform 0.4s, background 0.4s",
+        transition:
+          "top 0.1s ease, left 0.1s ease, transform 0.4s, background 0.4s",
+        pointerEvents: "none",
       }}
     />
   );
