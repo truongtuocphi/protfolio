@@ -22,6 +22,7 @@ const ProfileHero = () => {
               className="absolute w-auto h-auto"
               fill
               alt={"Logo"}
+              priority
               sizes="(max-width: 700px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           </div>
