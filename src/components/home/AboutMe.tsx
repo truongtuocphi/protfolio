@@ -1,6 +1,31 @@
+"use client";
+
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect, useRef } from "react";
+
+gsap.registerPlugin(ScrollTrigger);
+
 const AboutMe = () => {
+  const textRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const textElement = textRef.current;
+    if (!textElement?.textContent) return;
+
+    const words = textElement.textContent.split(" ");
+    textElement.innerHTML = words
+      .map((word) => `<span>${word}</span>`)
+      .join(" ");
+
+    console.log(textElement);
+  }, []);
+
   return (
-    <div className="responsive-font-base font-light text-start px-4 lg:px-28">
+    <div
+      ref={textRef}
+      className="responsive-font-base font-light text-start px-4 lg:px-28"
+    >
       <span className="ml-32"></span>
       <span className="text-[#F1DAD9]">
         I&apos;m a Vietnam digital designer and web developer with over 10 years
