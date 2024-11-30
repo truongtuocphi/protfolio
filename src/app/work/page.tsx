@@ -1,3 +1,3 @@
 export default function page() {
-  return <div className="flex">Page work</div>;
+  return <div className="flex">Work</div>;
 }
